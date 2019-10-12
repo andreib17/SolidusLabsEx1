@@ -1,0 +1,2 @@
+# the bottleneck in the service would be the database interactions, the service could be scaled vertically by adding
+# resources (CPU, RAM) to the existing machine, or horizontally by adding more servers.
