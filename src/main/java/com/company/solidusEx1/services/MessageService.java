@@ -44,13 +44,4 @@ public class MessageService implements MessageServiceIfc {
         return messageRepository.findByHash256(hash);
     }
 
-    /**
-     * create a json object by given fieldName and field value
-     */
-    public ObjectNode formulateJsonResponse(String fieldName, String fieldValue) {
-        ObjectMapper mapper = new ObjectMapper();
-        ObjectNode objectNode = mapper.createObjectNode();
-        objectNode.put(fieldName, fieldValue);
-        return objectNode;
-    }
 }

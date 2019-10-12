@@ -12,5 +12,4 @@ public interface MessageServiceIfc {
 
     Optional<Message> getMessageByHash(String hash);
 
-    ObjectNode formulateJsonResponse(String fieldName, String fieldValue);
 }
