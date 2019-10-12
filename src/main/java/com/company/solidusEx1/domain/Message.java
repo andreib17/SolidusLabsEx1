@@ -2,19 +2,19 @@ package com.company.solidusEx1.domain;
 
 import javax.persistence.*;
 
-@Table(name="MESSAGE")
+@Table(name = "MESSAGE")
 @Entity
 public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="MESSAGE_ID")
+    @Column(name = "MESSAGE_ID")
     private Long id;
 
-    @Column(name="MESSAGE_TEXT")
+    @Column(name = "MESSAGE_TEXT")
     private String message;
 
-    @Column(name="HASH")
+    @Column(name = "HASH")
     private String hash256;
 
     public Long getId() {

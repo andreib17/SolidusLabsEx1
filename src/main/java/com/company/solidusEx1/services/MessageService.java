@@ -6,17 +6,18 @@ import com.company.solidusEx1.utils.Utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Service;
+
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Optional;
 
 @Service
-public class MessageService implements MessageServiceIfc{
+public class MessageService implements MessageServiceIfc {
 
     private MessageRepository messageRepository;
 
-    public MessageService(MessageRepository messageRepository){
+    public MessageService(MessageRepository messageRepository) {
         this.messageRepository = messageRepository;
     }
 
@@ -49,7 +50,7 @@ public class MessageService implements MessageServiceIfc{
     public ObjectNode formulateJsonResponse(String fieldName, String fieldValue) {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode objectNode = mapper.createObjectNode();
-        objectNode.put(fieldName,fieldValue);
+        objectNode.put(fieldName, fieldValue);
         return objectNode;
     }
 }

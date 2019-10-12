@@ -14,7 +14,7 @@ public class MessageController {
 
     private MessageServiceIfc messageService;
 
-    public MessageController(MessageServiceIfc messageService){
+    public MessageController(MessageServiceIfc messageService) {
         this.messageService = messageService;
     }
 
@@ -25,9 +25,9 @@ public class MessageController {
     }
 
     @GetMapping("/messages/{hash}")
-    public ObjectNode getMessageByHash(@PathVariable String hash){
+    public ObjectNode getMessageByHash(@PathVariable String hash) {
         Optional<Message> optMsg = messageService.getMessageByHash(hash);
-        if(optMsg.isPresent()){
+        if (optMsg.isPresent()) {
             return messageService.formulateJsonResponse("message", optMsg.get().getMessage());
         }
         throw new MessageNotFoundException(hash);
